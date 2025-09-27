@@ -43,5 +43,11 @@ Thornlists specify both the repositories where code can be found, and the struct
 
 In this way, the thornlists act a simple database (much like the .ini, .cfg, .sub, and .run files), which uniquely determine the set of code repositories that are checked out, down to the branch version, and the arrangments structure. As a bonus, thornlists are also used by the build system to specify which thorns are to be built into a given Cactus configuration.
 
-In ```example_azrelativity_thornlist.th``` I show what to _append_ to a standard Einstein Toolkit thornlist in order to check out and install the thorns in our GitHub organization. For more about the CRL language of thornlists that is parsed by GetComponents, see:
+In ```example_azrelativity_thornlist.th``` I show what to _append_ to a standard Einstein Toolkit thornlist in order to check out and install the thorns in our GitHub organization. If appending ```example_azrelativity_thornlist.th``` to ```einsteintoolkit.th``` (for example) and removing andy redundant thonrs, results in ```updated_thornlist.th```, then the associated configuration would either be installed fresh or updated by going to the directory above Cactus and running:
+```
+$ ./GetComponents updated_thornlist.th
+```
+And following the prompts.
+
+For more about the CRL language of thornlists that is parsed by GetComponents, see:
 https://github.com/gridaphobe/CRL/wiki/Component-Retrieval-Language
