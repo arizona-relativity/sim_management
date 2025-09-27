@@ -21,8 +21,7 @@ AZRelativity/TwoPuncturesPowerLaw
 
 # Private thorns - These ones need to be checked out and symlinked into arrangments manually
 # However, by including them in this thornlist symfactory can be used to build them.
-!TARGET   = $ARR
-!TYPE     = ignore
-!CHECKOUT =
-MPn/MPn
-MPn/ID_MPn
+#!TARGET   = $ARR
+#!TYPE     = ignore
+#!CHECKOUT =
+#(List private thorns here, with the paths they have in the arrangements folder)
