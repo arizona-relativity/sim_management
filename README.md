@@ -24,11 +24,7 @@ Same as above, but for 3D files. Keeps 3D outputs in every 10th output.
 Automatically tar a checkpoint if one hasn't been tarred in >10 outputs. Needs to be done!
 
 ## scan_arrangements.sh
-In order to determine exactly which versions of which thorns are being used in a given Cactus configuration, this script can be placed into the 'arrangements' folder and run with arguments ./ and 0, that is:
-```
-$ ./scan_arrangements.sh ./ 0
-```
-The script will recursively search for repositories in the arrangements folder (following symbolic links of course), and when found print the path to the thorn and the branch of the repository it is using.
+In order to determine exactly which versions of which thorns are being used in a given Cactus configuration, this script can be placed into the 'arrangements' folder and run. It will recursively search for repositories in the arrangements folder (following symbolic links of course), and when found print the path to the thorn and the branch of the repository it is using.
 (The script has a hard-coded depth limit of 4: GetComponents never places the repository links more than one level down, so if 4 levels is not enough it is likely you are not setting up you Cactus conifiguration in a protable way, and you should consider the advice in the next section.)
 
 # Managing Cactus Configurations with GetComponents & Thornlists
