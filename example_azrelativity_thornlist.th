@@ -1,0 +1,27 @@
+# The below lines can be appended to an existing Einstein Toolkit thornlist to add arizona-relativity thorns to the Cactus install
+# created by GetComponents. See the instructions in the README for the right way to use thornlists to manage Cactus installs and
+# configurations.
+
+# Thorns from the arizona relativity repo - as long as no password needs to be typed, these can be checked out just like public repos!
+!TARGET   = $ARR # This variable is set above to correspond to the Cactus/arrangments directory, where the thorns should be symlinked
+!TYPE     = git
+!URL      = git@github.com:arizona-relativity/$2 # The variable $2 is the string after the first / in !CHECKOUT
+#!REPO_BRANCH = main # It seems like we can just leave this blank when checking out main
+!REPO_PATH = ../$2 # GetComponents needs a folder to copy the contents of: to copy the current folder we go back a level and then target $2
+# Feel free to comment out any thorns you don't want below:
+!CHECKOUT =
+AZRelativity/CocalBHT
+AZRelativity/IllinoisGRMHD
+AZRelativity/LeanBSSNMoL
+AZRelativity/Christoffel
+AZRelativity/QuasiLocalMeasuresMHD
+AZRelativity/DiskDiagnostics
+AZRelativity/TwoPuncturesPowerLaw
+# ^ Note that the arrangment name, 'AZRelativity', doesn't have to have anything to do with the repository name
+
+# Private thorns - These ones need to be checked out and symlinked into arrangments manually
+# However, by including them in this thornlist symfactory can be used to build them.
+#!TARGET   = $ARR
+#!TYPE     = ignore
+#!CHECKOUT =
+#(List private thorns here, with the paths they have in the arrangements folder)
