@@ -1,7 +1,5 @@
 # Simulation Management Scripts
 
-These are 5 scripts I use to manage my simulations over time.
-
 ## tar_outputs.sh
 Will tar output folders of a specified simulation for specified (sequential) outputs. 
 e.g. ```./tar_outputs.sh -d SIMULATION_NAME -s 0 -e 10```
